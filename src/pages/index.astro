@@ -1104,11 +1104,21 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
     }
 
     .hero {
-      min-height: 100vh;
+      height: auto;
+      min-height: 100svh;
+      padding-top: 84px;
+      padding-bottom: 2.5rem;
+      align-items: flex-start;
     }
 
     .hero-content h1 {
       font-size: 1.8rem;
+    }
+
+    .hero-badge {
+      font-size: 0.85rem;
+      padding: 0.55rem 1.25rem;
+      letter-spacing: 1.5px;
     }
 
     .hero-stats {
@@ -1119,12 +1129,17 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
 
     .hero-actions {
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
     }
 
     .btn {
       width: 100%;
       justify-content: center;
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.15);
     }
 
     .details-image {
