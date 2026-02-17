@@ -32,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-content">
       <span class="hero-badge">Vende su dueño</span>
       <h1>Terreno urbanizado Condominio Nueva Umbrales<br /><span>La Serena</span></h1>
-      <p class="hero-subtitle">Sitio 141 &mdash; Condominio Nueva Umbrales</p>
+      <p class="hero-subtitle">Sitio 141</p>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-value">600</span>
@@ -137,9 +137,9 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
         <h2>Conoce el terreno y su entorno</h2>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item gallery-item--large">
-          <img src="/images/foto1.jpg" alt="Vista aerea panoramica del desarrollo" loading="lazy" />
-          <span class="gallery-caption">Vista aerea del condominio</span>
+        <div class="gallery-item gallery-item--wide">
+          <img src="/images/masterplan.png" alt="Masterplan del condominio con sitio 141 destacado" loading="lazy" />
+          <span class="gallery-caption">Masterplan - Sitio 141</span>
         </div>
         <div class="gallery-item">
           <img src="/images/foto2.jpg" alt="Vista aerea de los terrenos urbanizados" loading="lazy" />
@@ -153,9 +153,17 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
           <img src="/images/foto3.jpg" alt="Vista satelital del condominio" loading="lazy" />
           <span class="gallery-caption">Vista satelital</span>
         </div>
-        <div class="gallery-item gallery-item--wide">
-          <img src="/images/masterplan.png" alt="Masterplan del condominio con sitio 141 destacado" loading="lazy" />
-          <span class="gallery-caption">Masterplan - Sitio 141</span>
+        <div class="gallery-item">
+          <img src="/images/condominio.jpg" alt="Condominio Nueva Umbrales" loading="lazy" />
+          <span class="gallery-caption">Condominio Nueva Umbrales</span>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/condominio2.jpg" alt="Condominio Nueva Umbrales vista 2" loading="lazy" />
+          <span class="gallery-caption">Condominio Nueva Umbrales</span>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/foto1.jpg" alt="Vista aerea panoramica del desarrollo" loading="lazy" />
+          <span class="gallery-caption">Vista aerea del condominio</span>
         </div>
       </div>
     </div>
@@ -647,7 +655,7 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
 
   .gallery-item--wide {
     grid-column: 1 / -1;
-    aspect-ratio: 21/9;
+    aspect-ratio: 16/9;
   }
 
   .gallery-item img {
@@ -681,10 +689,18 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
     align-items: stretch;
   }
 
+  .details-content {
+    text-align: center;
+  }
+
   .details-content p {
     color: var(--color-text-light);
     margin: 1rem 0;
     font-size: 1.05rem;
+  }
+
+  .details-list {
+    text-align: left;
   }
 
   .details-list {
