@@ -54,6 +54,7 @@ import Layout from '../layouts/Layout.astro';
           WhatsApp
         </a>
         <a href="/docs/ficha-sitio-141.pdf" target="_blank" class="btn btn-outline">Ver ficha tecnica</a>
+        <a href="/docs/plano_topografico.pdf" target="_blank" class="btn btn-outline">Ver plano topografico</a>
       </div>
     </div>
   </header>
@@ -67,7 +68,7 @@ import Layout from '../layouts/Layout.astro';
           <h2>Sitio 141 &mdash; Una ubicacion privilegiada</h2>
           <p>
            Terreno de <strong>600 m²</strong> en el exclusivo <strong>Condominio Nueva Umbrales</strong>, La Serena.
-Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece versatilidad para diseñar y construir la casa de tus sueños. Además, se encuentra alejado de la torre de alta tensión, asegurando tranquilidad y seguridad para tu familia.
+Con dimensiones aproximadas de 16 x 37,5 metros, el terreno posee una leve pendiente de un 4% en el sentido longitudinal del terreno, el mismo ofrece versatilidad para diseñar y construir la casa de tus sueños. Además, se encuentra alejado de la torre de alta tensión, asegurando tranquilidad y seguridad para tu familia.
           </p>
           <p>
             Ubicado en un entorno rodeado de cerros y naturaleza, con todas las
@@ -112,9 +113,14 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
               </div>
             </li>
           </ul>
-          <a href="/docs/ficha-sitio-141.pdf" target="_blank" class="btn btn-primary">
-            Descargar ficha tecnica (PDF)
-          </a>
+          <div class="details-actions">
+            <a href="/docs/ficha-sitio-141.pdf" target="_blank" class="btn btn-primary">
+              Descargar ficha tecnica (PDF)
+            </a>
+            <a href="/docs/plano_topografico.pdf" target="_blank" class="btn btn-secondary">
+              Ver plano topografico (PDF)
+            </a>
+          </div>
         </div>
         <div class="details-image">
           <img src="/images/foto1.jpg" alt="Vista aerea panoramica del condominio" loading="lazy" />
@@ -568,6 +574,19 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
     border-color: rgba(255, 255, 255, 0.5);
   }
 
+  .btn-secondary {
+    background: var(--color-bg-alt);
+    color: var(--color-dark);
+    border: 1.5px solid var(--color-primary);
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+  }
+
   .btn-full {
     width: 100%;
     justify-content: center;
@@ -652,6 +671,23 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
     aspect-ratio: 16/9;
   }
 
+  .gallery-item--portrait {
+    grid-column: 1 / -1;
+    aspect-ratio: unset;
+    height: auto;
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .gallery-item--portrait img {
+    position: static;
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    display: block;
+  }
+
   .gallery-item img {
     width: 100%;
     height: 100%;
@@ -685,6 +721,13 @@ Con dimensiones aproximadas de 16 x 37,5 metros, este amplio terreno ofrece vers
 
   .details-content {
     text-align: center;
+  }
+
+  .details-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .details-content p {
